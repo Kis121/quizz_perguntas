@@ -1,0 +1,5 @@
+<div class="grid-container">
+  <div *ngFor="let question of questionList" class="grid-item">
+    <button (click)="onClick(question.id)">{{question.question}}</button>
+  </div>
+</div>

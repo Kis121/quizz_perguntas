@@ -1,0 +1,26 @@
+<div class="main">
+  <h1>Up Quizz</h1>
+  <div *ngFor="let question of questionList">
+    <div class="main" *ngIf="question.id === question_id">
+      <h3>{{question.question}}</h3>
+      <button
+        [ngClass]="{'red' : toggle}"
+      >{{question.option1}}</button> <br>
+      <button
+        [ngClass]="{'red' : toggle}"
+      >{{question.option2}}</button> <br>
+      <button
+        [ngClass]="{'red' : toggle}"
+      >{{question.option3}}</button> <br>
+      <button
+        [ngClass]="{'green' : toggle}">
+        {{question.answer}}
+      </button>
+    </div>
+  </div>
+
+  <div>
+    <button (click)="onClick()">Resposta</button>
+  </div>
+
+</div>
